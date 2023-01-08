@@ -1,0 +1,23 @@
+body {
+    background-color: aliceblue;
+    text-align:center;
+}
+
+header,
+section  {
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+
+.canvas-container {
+    height:60vh;
+    width:60vh;
+    display:grid;
+}
+
+.options-container {
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
