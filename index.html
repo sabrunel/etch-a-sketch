@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -13,19 +16,20 @@
         <h1>Etch a Sketch</h1>
     </header>
     <main>
-        <section class="canvas-container">
-        </section>
         <section class="options-container">
             <div class="brush-options">
                 <button id="black-btn"> BLACK </button>
                 <button id="random-btn"> RANDOM </button>
                 <button id="eraser-btn"> ERASER </button>
-                <button id="clear-btn"> CLEAR </button>
             </div>
             <div class="canvas-options">
-                <input type="text" placeholder="Choose canvas size">
+                <input type="text" placeholder="Canvas size (2 to 100)">
                 <button id="create-canvas-btn"> CREATE </button>
+                <button id="clear-btn"> CLEAR </button>
             </div>
+        </section>
+        <p id="create-canvas-hint"></p>
+        <section class="canvas-container">
         </section>
     </main>
 </body>
