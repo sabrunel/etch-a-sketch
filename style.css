@@ -1,23 +1,90 @@
+:root {
+    --clr-primary: #A1FFCE;
+    --clr-secondary: #FAFFD1;
+    --clr-accent: #FE69BD;
+    --clr-border: #290218;
+    --clr-bg: #fff;
+
+    --clr-gradient: linear-gradient(45deg, var(--clr-primary), var(--clr-secondary));
+    --box-shadow: var(--clr-border) 3px 3px 0 0;
+    --border: 2px solid var(--clr-border);
+
+    --ff-sans-serif: 'Chivo', 'sans serif';
+    --fw-700: 700;
+    --fw-500: 500;
+    --fw-400: 400;
+    --fw-300: 300
+}
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aliceblue;
-    text-align:center;
+    background: var(--clr-gradient);
+    height: 100vh;
+    text-align: center;
+    font-family: var(--ff-sans-serif);
+    font-weight: var(--fw-400);
+    color: var(--clr-border);
 }
 
 header,
 section  {
-    padding: 1rem;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
+    max-width: 50vh;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: var(--fw-700);
+    padding: 2rem 0;
+}
+
+button {
+    background-color: var(--clr-accent);
+    border: var(--border);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    color: var(--clr-border);
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: var(--fw-500);
+}
+
+button:hover {
+    background-color: var(--clr-bg);
+  }
+
+input[type=text] {
+    background-color: var(--clr-bg);
+    border: var(--border);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-weight: var(--fw-300);
+}
 
 .canvas-container {
-    height:60vh;
-    width:60vh;
-    display:grid;
+    height: 50vh;
+    width: 50vh;
+    display: grid;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
 }
 
-.options-container {
-    display:flex;
-    flex-direction: column;
-    gap: 2rem;
+.canvas-options-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brush-options-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
 }
